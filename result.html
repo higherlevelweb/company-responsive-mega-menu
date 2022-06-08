@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Megamenu Concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Site Header with Navigation -->
+    <div class="container-fluid site-header">
+        <div class="container">
+            <div class="top-nav-icon" onclick="responsiveMenuToggle()"><button id="nav-icon">
+                    <i class="fa fa-bars"></i><span>Menu</span></button></div>
+            <nav class="navbar" id="top-nav">
+                <div class="navbar-header">
+                    <a class="navbar-brand logo" href="#">
+                        <img alt="Generic Electrical" src="images/logo.svg">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-top">
+                    <li class="active"><a href="#">About Us</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form navbar-left" action="/action_page.php">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="search">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li id="btn-register"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Register</a></li>
+                    <li id="btn-login"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                </ul>
+            </nav>
+            <nav class="navbar navbar-sub" id="main-nav">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a class="dropdown-menu-link" href="#"
+                            onmouseover="dropDownHover()" onmouseout="normalMain()">Residential Services <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/residential-services-icon.svg"
+                                                alt="Residential Services">
+                                            <h3>Residential Services</h3>
+                                            <div class="dropdown-link"><a href="#">Seasonal Residents</a></div>
+                                            <div class="dropdown-link"><a href="#">Working Safely at Home</a></div>
+                                            <div class="dropdown-link"><a href="#">Have You Been Disconnected?</a></div>
+                                            <div class="dropdown-link"><a href="#">Financial Assistance</a></div>
+                                            <div class="dropdown-link"><a href="#">Electric Vehicle Buyer's Guide</a>
+                                            </div>
+                                            <div class="dropdown-link"><a href="#">Indigenous Relations</a></div>
+                                        </div>
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/find-more-icon.svg"
+                                                alt="Find More">
+                                            <h3>Find More</h3>
+                                            <div class="dropdown-link"><a href="#">View My Bill</a></div>
+                                            <div class="dropdown-link"><a href="#">Understanding My Bill</a></div>
+                                            <div class="dropdown-link"><a href="#">Report a Power Outage</a></div>
+                                            <div class="dropdown-link"><a href="#">Billing & Payment Methods</a></div>
+                                            <div class="dropdown-link"><a href="#">Move In/Move Out Requests</a></div>
+                                            <div class="dropdown-link"><a href="#">Unregistered Easements</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active"><a class="dropdown-menu-link" href="#"
+                            onmouseover="dropDownHover()" onmouseout="normalMain()">Business Services <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/business-services-icon.svg"
+                                                alt="Business Services">
+                                            <h3>Business Services</h3>
+                                            <div class="dropdown-link"><a href="#">Commercial/Industrial, Generators and
+                                                    LDCs</a></div>
+                                            <div class="dropdown-link"><a href="#">Links and Forms</a></div>
+                                            <div class="dropdown-link"><a class="active" href="#">Farmers</a></div>
+                                            <div class="dropdown-link"><a href="#">Builders & Contractors</a></div>
+                                        </div>
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/find-more-icon.svg"
+                                                alt="Find More">
+                                            <h3>Find More</h3>
+                                            <div class="dropdown-link"><a href="#">Outage Alerts</a></div>
+                                            <div class="dropdown-link"><a href="#">Retrofit Program</a></div>
+                                            <div class="dropdown-link"><a href="#">Request a Service</a></div>
+                                            <div class="dropdown-link"><a href="#">Summary Billing</a></div>
+                                            <div class="dropdown-link"><a href="#">Net Metering</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-menu-link" href="#" onmouseover="dropDownHover()" onmouseout="normalMain()">Rates &
+                            Billing <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/rates-and-billing-icon.svg"
+                                                alt="Rates & Billing">
+                                            <h3>Rates & Billing</h3>
+                                            <div class="dropdown-link"><a href="#">Seasonal Residents</a></div>
+                                            <div class="dropdown-link"><a href="#">Working Safely at Home</a></div>
+                                            <div class="dropdown-link"><a href="#">Have You Been Disconnected?</a></div>
+                                            <div class="dropdown-link"><a href="#">Financial Assistance</a></div>
+                                            <div class="dropdown-link"><a href="#">Electric Vehicle Buyer's Guide</a>
+                                            </div>
+                                            <div class="dropdown-link"><a href="#">Indigenous Relations</a></div>
+                                        </div>
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/find-more-icon.svg"
+                                                alt="Find More">
+                                            <h3>Find More</h3>
+                                            <div class="dropdown-link"><a href="#">View My Bill</a></div>
+                                            <div class="dropdown-link"><a href="#">Understanding My Bill</a></div>
+                                            <div class="dropdown-link"><a href="#">Report a Power Outage</a></div>
+                                            <div class="dropdown-link"><a href="#">Billing & Payment Methods</a></div>
+                                            <div class="dropdown-link"><a href="#">Move In/Move Out Requests</a></div>
+                                            <div class="dropdown-link"><a href="#">Unregistered Easements</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-menu-link" href="#" onmouseover="dropDownHover()" onmouseout="normalMain()">Saving
+                            Money & Energy <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/saving-for-homes-icon.svg"
+                                                alt="For Homes">
+                                            <h3>For Homes</h3>
+                                            <div class="dropdown-link"><a href="#">myEnergy Marketplace</a></div>
+                                            <div class="dropdown-link"><a href="#">Financial Assistance</a></div>
+                                            <div class="dropdown-link"><a href="#">Fual Switching</a></div>
+                                            <div class="dropdown-link"><a href="#">Tips and Tools</a></div>
+                                        </div>
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/saving-for-business-icon.svg"
+                                                alt="For Business">
+                                            <h3>For Businesses</h3>
+                                            <div class="dropdown-link"><a href="#">Programs and Incentives</a></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-menu-link" href="#" onmouseover="dropDownHover()" onmouseout="normalMain()">Power
+                            Outages & Safety <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/power-outages-and-safety-icon.svg"
+                                                alt="Power Outages & Safety">
+                                            <h3>Power Outages & Safety</h3>
+                                            <div class="dropdown-link"><a href="#">Outage Map</a></div>
+                                            <div class="dropdown-link"><a href="#">Outage Tools</a></div>
+                                            <div class="dropdown-link"><a href="#">Corporate Health & Safety</a></div>
+                                            <div class="dropdown-link"><a href="#">When the Power Goes Out</a></div>
+                                            <div class="dropdown-link"><a href="#">Life Support Notification</a></div>
+                                            <div class="dropdown-link"><a href="#">Vegetation Management</a></div>
+                                        </div>
+                                        <div class="col-md-6 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/find-more-icon.svg"
+                                                alt="Find More">
+                                            <h3>Find More</h3>
+                                            <div class="dropdown-link"><a href="#">Outage Alerts</a></div>
+                                            <div class="dropdown-link"><a href="#">Damage Claims</a></div>
+                                            <div class="dropdown-link"><a href="#">Tree Trimming</a></div>
+                                            <div class="dropdown-link"><a href="#">Temporary Disconnect</a></div>
+                                            <div class="dropdown-link"><a href="#">Underground Cable Locates</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-menu-link" href="#" onmouseover="dropDownHover()" onmouseout="normalMain()">Support
+                            Center & FAQs <span class="caret"></span></a>
+                        <ul class="dropdown-menu" onmouseover="dropDownHover()" onmouseout="normalMain()">
+                            <li>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="col-md-12 dropdown-content-column">
+                                            <img class="top-column-icon" src="images/support-center-and-faqs-icon.svg"
+                                                alt="Support Center & FAQs">
+                                            <h3>Support Center & FAQs</h3>
+                                            <div class="dropdown-link"><a href="#">Seasonal Residents</a></div>
+                                            <div class="dropdown-link"><a href="#">Working Safely at Home</a></div>
+                                            <div class="dropdown-link"><a href="#">Have You Been Disconnected?</a></div>
+                                            <div class="dropdown-link"><a href="#">Financial Assistance</a></div>
+                                            <div class="dropdown-link"><a href="#">Electric Vehicle Buyer's Guide</a>
+                                            </div>
+                                            <div class="dropdown-link"><a href="#">Indigenous Relations</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-highlight"><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>
+                            Request a Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="feedback-tab" class="sidenav">
+        <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i> Feedback</a>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal">
+        <!-- Feedback Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Customer Satisfaction Survey</h2>
+            <h3>We're always looking for ways to continue to improve. We appreciate you
+                taking the time to provide us some feedback!</h3>
+            <p>In order to protect your privacy, please do not share your personal
+                information, such as your account number or your contact information. Please see Section 2.5.2
+                of our Conditions of Service for how we collect, use and disclose your information, including
+                information we collect from you during this survey. If you require immediate
+                assistance or would like to speak to someone about your account, please call Customer Service at:
+                <br /><a class="phone-link" href="tel:1-888-664-9376">1-888-664-9376</a> (Monday to
+                Friday 7:30am - 8:00pm).
+            </p>
+            <div>
+                <fieldset>
+                    <legend>How satisfied are you with our website?&nbsp;
+                    </legend>
+                    <div class="question-set">
+                        <!-- Begin Choices w/o choice groups -->
+                        <ul class="question-set-list">
+                            <li> <input type="radio" name="question-set-1" id="option-1" value="1"
+                                    aria-label="Very satisfied"><label for="option-1" aria-hidden="true"> <span
+                                        class="LabelWrapper">Very
+                                        satisfied</span></label>
+                            </li>
+                            <li> <input type="radio" name="question-set-1" id="option-2" value="1"
+                                    aria-label="Somewhat satisfied"><label for="option-2" aria-hidden="true"> <span
+                                        class="LabelWrapper">Somewhat
+                                        satisfied</span></label>
+                            </li>
+                            <li> <input type="radio" name="question-set-1" id="option-3" value="1"
+                                    aria-label="Neither satisfied nor dissatisfied"><label for="option-3"
+                                    aria-hidden="true"> <span class="LabelWrapper">Neither
+                                        satisfied nor dissatisfied</span></label>
+                            </li>
+                            <li> <input type="radio" name="question-set-1" id="option-4" value="1"
+                                    aria-label="Somewhat dissatisfied"><label for="option-4" aria-hidden="true"> <span
+                                        class="LabelWrapper">Somewhat dissatisfied</span></label>
+                            </li>
+                            <li> <input type="radio" name="question-set-1" id="option-5" value="1"
+                                    aria-label="Very dissatisfied"><label for="option-5" aria-hidden="true"> <span
+                                        class="LabelWrapper">Very dissatisfied</span></label>
+                            </li>
+                        </ul> <!-- End Choices w/o choice groups -->
+                        <button class="btn btn-default" type="submit">
+                            Submit Survey
+                        </button>
+                        <hr />
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <section class="section-main" id="section-main">
+        <div class="main-banner-area">
+            <div class="container">
+                <div class="banner-content">
+                    <h1 class="banner-page-title">Farmers</h1>
+                    <p class="banner-page-subtitle">We proudly serve the majority of farm and rural customers throughout
+                        Ontario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="section-highlight" id="section-highlight">
+        <div class="container-fluid">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#" aria-label="Home"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li><a href="#">Business Services</a></li>
+                    <li class="active">Farmers</li>
+                </ul>
+                <div class="row-highlight">
+                    <h4>Learn more about farm safety, stray voltage, and sentinel lighting here.<br></h4>
+                </div>
+            </div>
+            <div class="sub-section-nav">
+                <ul class="sub-section-nav-links">
+                    <li><a href="#">Farm Safety</a></li>
+                    <li><a href="#">Sentinel Lights</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section-call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center call-to-action">
+                    <h4>See if your large volume farm qualifies for the Ontario Electricity Rebate.</h4>
+                    <div>
+                        <a title="Click here to complete the declaration form for large volume farm businesses"
+                            class="btn btn-lg btn-app-common" role="button" href="#" target="_blank">Apply Now <i
+                                class="fa fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Columns Section -->
+    <section class="section-article-columns">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="article-content">
+                        <img alt="Image of a barn on farm land" src="images/farmers.jpg">
+                        <h4 class="article-title">Farm Safety</h4>
+                        <p class="article-headline">Practicing safe farming around our electrical system is
+                            integral to ensuring your safety.</p>
+                        <a title="Learn more about Farm Safety" class="btn btn-lg btn-app-link left-align" role="button"
+                            href="#">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="article-content">
+                        <img alt="Image of cows on a farm" src="images/stray-voltage-assessment-hero.jpg">
+                        <h4 class="article-title">Stray Voltage</h4>
+                        <p class="article-headline">Worried about stray voltage on your farm? Schedule an
+                            assessment by our Farm Rapid Response Team.</p>
+                        <a title="Learn More about Stray Voltage" class="btn btn-lg btn-app-link left-align"
+                            role="button" href="#">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="article-content">
+                        <img alt="Image of the Generic Electrical tent at The International Plowing Match"
+                            src="images/international-plowing-match.jpg">
+                        <h4 class="article-title">The International Plowing Match</h4>
+                        <p class="article-headline">We have been proudly sponsoring the International Plowing Match and
+                            Rural Expo for over ten years.</p>
+                        <a title="Learn more about the International Plowing Match" class="btn" role="button"
+                            href="#">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="section-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="feature-content">
+                        <h3 class="feature-header">Sentinel Light Rental Program</h3>
+                        <p class="feature-headline">
+                            <img class="feature-box-img" alt="Illustration of a light bulb"
+                                src="images/red_lightglobe.svg">
+                            The Sentinel Light Rental Program manages the supply,
+                            operation, and service of our customers' sentinel lights.
+                        </p>
+                        <a title="Learn more about our Sentinel Light Program"
+                            class="btn content-box-btn content-box-btn-bottom" role="button"
+                            href="/business-services/farmers/sentinel-lights">Learn more <i
+                                class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Metafooter -->
+    <div class="container-fluid site-metafooter">
+        <div class="container">
+            <div class="row">
+                <h3 class="metafooter-header">More from Generic Electrical</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4 metafooter-block">
+                    <h4>Manage your monthly bill</h4>
+                    <div><a href="#">Sign Up for Paperless Billing</a></div>
+                    <div><a href="#">View Time-of-Use Rates</a></div>
+                </div>
+                <div class="col-md-4 metafooter-block">
+                    <h4>Stay updated</h4>
+                    <div><a href="#">Sign Up for Outage Alerts</a></div>
+                    <div><a href="#">Learn About High Usage Alerts</a></div>
+                    <div><a href="#">View Our Outage Map</a></div>
+                </div>
+                <div class="col-md-4 metafooter-block">
+                    <h4>Connect with us</h4>
+                    <a href="#" title="Twitter" aria-label="Twitter"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="#" title="Facebook" aria-label="Facebook"><i class="fa fa-facebook-official"
+                            aria-hidden="true"></i></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa fa-linkedin-square"
+                            aria-hidden="true"></i></a>
+                    <a href="#" title="Youtube" aria-label="Youtube"><i class="fa fa-youtube-play"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <div class="container-fluid site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-links-list">
+                    <ul>
+                        <li><a href="/careers/" title="Careers">Careers</a></li>
+                        <li><a href="/investor-relations" title="Investor Relations">Investor Relations</a></li>
+                        <li><a href="/about/regulatory" title="Regulatory Affairs">Regulatory Affairs</a></li>
+                        <li><a href="/newsroom" title="Newsroom">Newsroom</a></li>
+                        <li><a href="/support/contact" title="Contact Us">Contact Us</a></li>
+                        <li><a href="/employee-updates" title="Employee Hub">Employee Hub</a></li>
+                        <li><a href="/Francais" title="En Français">En Français</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-bottom-links">
+                    <ul>
+                        <li><a href="/privacy-and-cookies" title="Privacy and Cookies">Privacy &amp; Cookies</a></li>
+                        <li><a href="/terms-of-use" title="Terms of Use">Terms of Use</a></li>
+                        <li><a href="/about/corporate-social-responsibility/accessibility"
+                                title="Accessibility">Accessibility</a></li>
+                        <li><a href="/sitemap" title="Site Map">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-bottom-note">
+                    <p>2009-2022 Generic Electrical Inc.<br> All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side BUtton (Need Help?) -->
+    <div class="right-side-btn"><button id="help" title="Need Help?"><img alt="Need Help?"
+                src="images/help.svg"></button>
+        <p class="btn-sub-text" id="help-btn-sub-text">Need Help?</p>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div><button onclick="backToTopFunction()" id="back-to-top" title="Back to Top" aria-label="Back to Top"><i
+                class="fa fa-angle-up" aria-hidden="true"></i></button></div>
+
+    <!-- Site Scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
